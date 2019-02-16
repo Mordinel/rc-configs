@@ -6,7 +6,7 @@ printf "Replace .bashrc and .vimrc with the repo versions? (y/N): "
 read choice
 choice=$( echo "$choice" | tr '[:upper:]' '[:lower:]' )
 
-if [ $choice == 'y' ] || [ $choice == 'yes' ] 
+if [ "$choice" == 'y' ] || [ "$choice" == 'yes' ] 
 then
     ln -sf $PWD/bashrc $HOME/.bashrc
     ln -sf $PWD/vimrc $HOME/.vimrc
