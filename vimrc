@@ -10,7 +10,6 @@ set sc
 set autoread
 colo desert
 set background=dark
-syntax on
 set encoding=utf8
 set hlsearch
 set incsearch
@@ -30,3 +29,4 @@ set lazyredraw
 set scrolloff=4
 set showcmd
 set so=7
+syntax on
