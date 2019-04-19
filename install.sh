@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Your current rc files in $HOME will be deleted and replaced."
-printf "Replace .bashrc and .vimrc with the repo versions? (y/N): "
+printf "Replace .bashrc, .vimrc and .tmux.conf with the repo versions? (y/N): "
 
 read choice
 choice=$( echo "$choice" | tr '[:upper:]' '[:lower:]' )
