@@ -19,6 +19,7 @@ set mat=2
 set noswapfile
 set nowb
 set nobackup
+set nomodeline
 set viminfo="NONE"
 set nojoinspaces
 set selection=exclusive
