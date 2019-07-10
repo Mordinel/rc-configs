@@ -2,7 +2,7 @@
 
 color="32"
 
-if [ "$USER" == "root" ];
+if [ $(id -u) -eq 0 ];
 then
     color="31"
 fi
