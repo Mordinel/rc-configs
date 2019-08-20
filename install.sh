@@ -6,7 +6,7 @@ printf "Replace .bashrc, .vimrc and .tmux.conf with the repo versions? (y/N): "
 read choice
 choice=$( echo "$choice" | tr '[:upper:]' '[:lower:]' )
 
-if [ "$choice" == 'y' ] || [ "$choice" == 'yes' ] 
+if [[ "$choice" =~ ^[y] ]]
 then
     ln -sf $PWD/bashrc $HOME/.bashrc
     ln -sf $PWD/vimrc $HOME/.vimrc
