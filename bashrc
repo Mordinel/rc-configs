@@ -1,5 +1,10 @@
 [[ $- != *i* ]] && return
 
+if [ -f ~/.bash_aliases ];
+then
+    . ~/.bash_aliases;
+fi
+
 color="32"
 
 if [ $(id -u) -eq 0 ];
