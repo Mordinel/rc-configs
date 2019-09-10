@@ -20,6 +20,7 @@ set noswapfile
 set nowb
 set nobackup
 set nomodeline
+set nocompatible
 set viminfo="NONE"
 set nojoinspaces
 set selection=exclusive
@@ -31,3 +32,4 @@ set scrolloff=4
 set showcmd
 set so=7
 syntax on
+filetype plugin indent on
