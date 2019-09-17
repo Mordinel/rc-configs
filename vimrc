@@ -8,7 +8,7 @@ set ai
 set si
 set sc
 set autoread
-colo blue
+colo default
 set background=dark
 set encoding=utf8
 set hlsearch
