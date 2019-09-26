@@ -43,5 +43,3 @@ command! MakeTags !ctags -R .
 
 syntax on
 filetype plugin indent on
-
-source /home/sg/.vim/snippets/vimrc_snippets
