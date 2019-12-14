@@ -40,6 +40,8 @@ let g:netrw_liststyle=3
 let g:netrw_browse_split=4
 
 command! MakeTags !ctags -R .
+command! Hex %!xxd
+command! Bin %!xxd -r
 
 syntax on
 filetype plugin indent on
