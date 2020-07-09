@@ -16,3 +16,4 @@ export PS1="\[\e[0;"$color"m\]\u\[\e[1;37m\]@\[\e[0;"$color"m\]\h\[\e[1;37m\]:[\
 export EDITOR="vim"
 
 alias ls='ls --color=auto'
+alias open='2>/dev/null xdg-open'
