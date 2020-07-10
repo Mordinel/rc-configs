@@ -8,7 +8,6 @@ set ai
 set si
 set sc
 set autoread
-colo default
 set background=dark
 set encoding=utf8
 set hlsearch
@@ -44,4 +43,5 @@ command! Hex %!xxd
 command! Bin %!xxd -r
 
 syntax on
+colo pablo
 filetype plugin indent on
