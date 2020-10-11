@@ -42,5 +42,5 @@ command! Hex %!xxd
 command! Bin %!xxd -r
 
 syntax on
-colo pablo
+colo delek
 filetype plugin indent on
