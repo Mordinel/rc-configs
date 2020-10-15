@@ -32,6 +32,7 @@ set showcmd
 set so=7
 set path+=**
 set wildmenu
+set backspace=indent,eol,start
 
 let g:netrw_banner=0
 let g:netrw_altv=1
