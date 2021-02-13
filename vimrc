@@ -42,8 +42,9 @@ command! Hex %!xxd
 command! Bin %!xxd -r
 
 syntax on
-colo delek
+colo peachpuff
 filetype plugin indent on
+highlight Normal ctermbg=NONE
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
