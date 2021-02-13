@@ -10,7 +10,6 @@ set sc
 set autoread
 set background=dark
 set encoding=utf8
-set hlsearch
 set incsearch
 set ignorecase
 set showmatch
@@ -45,3 +44,26 @@ command! Bin %!xxd -r
 syntax on
 colo delek
 filetype plugin indent on
+
+" vim-plug
+call plug#begin('~/.vim/plugged')
+
+" Tab completion for code completion
+Plug 'ervandew/supertab'
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
+" C++ code completion
+Plug 'xavierd/clang_complete'
+
+" C++ enhanced syntax highlighting
+Plug 'octol/vim-cpp-enhanced-highlight'
+
+" Python code completion
+Plug 'davidhalter/jedi-vim'
+
+" Theme
+Plug 'whatyouhide/vim-gotham'
+
+call plug#end()
+
+colorscheme gotham
