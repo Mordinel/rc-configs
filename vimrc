@@ -61,9 +61,4 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 " Python code completion
 Plug 'davidhalter/jedi-vim'
 
-" Theme
-Plug 'whatyouhide/vim-gotham'
-
 call plug#end()
-
-colorscheme gotham
