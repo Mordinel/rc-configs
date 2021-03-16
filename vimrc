@@ -42,7 +42,7 @@ command! Hex %!xxd
 command! Bin %!xxd -r
 
 syntax on
-colo peachpuff
+colo delek
 filetype plugin indent on
 highlight Normal ctermbg=NONE
 
