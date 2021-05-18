@@ -111,7 +111,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: IBM Plex Mono
+    family: TerminessTTF Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -122,7 +122,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: IBM Plex Mono
+    family: TerminessTTF Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -133,7 +133,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: IBM Plex Mono
+    family: TerminessTTF Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -144,7 +144,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: IBM Plex Mono
+    family: TerminessTTF Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
@@ -685,14 +685,15 @@ mouse_bindings:
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
 key_bindings:
-  - { key: Paste,                                       action: Paste          }
-  - { key: Copy,                                        action: Copy           }
-  - { key: L,         mods: Control,                    action: ClearLogNotice }
-  - { key: L,         mods: Control, mode: ~Vi|~Search, chars: "\x0c"          }
-  - { key: PageUp,    mods: Shift,   mode: ~Alt,        action: ScrollPageUp,  }
-  - { key: PageDown,  mods: Shift,   mode: ~Alt,        action: ScrollPageDown }
-  - { key: Home,      mods: Shift,   mode: ~Alt,        action: ScrollToTop,   }
-  - { key: End,       mods: Shift,   mode: ~Alt,        action: ScrollToBottom }
+  - { key: Paste,                                       action: Paste            }
+  - { key: Copy,                                        action: Copy             }
+  - { key: L,         mods: Control,                    action: ClearLogNotice   }
+  - { key: L,         mods: Control, mode: ~Vi|~Search, chars: "\x0c"            }
+  - { key: PageUp,    mods: Shift,   mode: ~Alt,        action: ScrollPageUp,    }
+  - { key: PageDown,  mods: Shift,   mode: ~Alt,        action: ScrollPageDown   }
+  - { key: Home,      mods: Shift,   mode: ~Alt,        action: ScrollToTop,     }
+  - { key: End,       mods: Shift,   mode: ~Alt,        action: ScrollToBottom   }
+  - { key: F11,                                         action: ToggleFullscreen }
 
   # Vi Mode
   #- { key: Space,  mods: Shift|Control, mode: Vi|~Search, action: ScrollToBottom          }
