@@ -1,4 +1,4 @@
-set relativenumber
+set number
 set expandtab
 set tabstop=4
 set softtabstop=0 
@@ -11,6 +11,7 @@ set autoread
 set background=dark
 set encoding=utf8
 set incsearch
+set hlsearch
 set ignorecase
 set showmatch
 set mat=2

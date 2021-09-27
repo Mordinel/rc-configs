@@ -19,7 +19,8 @@ export TERM=xterm-256color
 export SYSTEMD_PAGER=""
 
 alias ls='ls --color=auto'
+alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias open='2>/dev/null xdg-open'
+#alias open='2>/dev/null xdg-open'
