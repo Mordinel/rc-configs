@@ -8,10 +8,10 @@ fi
 # default to yellow
 color="33"
 
-# if primary user then green
+# if primary user then blue
 if [ $(id -u) -eq 1000 ];
 then
-    color="32"
+    color="34"
 fi
 
 # if username is sg then green
@@ -20,7 +20,7 @@ then
     color="32"
 fi
 
-# if root then omit 'username@'
+# if root then omit 'username@' and be red
 if [ $(id -u) -eq 0 ];
 then
     color="31"
