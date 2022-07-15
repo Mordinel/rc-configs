@@ -8,14 +8,8 @@ fi
 # default to yellow
 color="33"
 
-# if primary user then blue
+# if primary user then green
 if [ $(id -u) -eq 1000 ];
-then
-    color="34"
-fi
-
-# if username is sg then green
-if [ $(whoami) = "sg" ];
 then
     color="32"
 fi
