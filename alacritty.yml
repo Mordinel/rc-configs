@@ -78,7 +78,7 @@ window:
   title: "Terminal"
 
   # Allow terminal applications to change Alacritty's window title.
-  dynamic_title: false
+  dynamic_title: true
 
   # Window class (Linux/BSD only):
   #class:
