@@ -23,6 +23,9 @@ then
     ln -sf $PWD/polybar/config.ini $HOME/.config/polybar/config.ini
     ln -sf $PWD/polybar/launch.sh $HOME/.config/polybar/launch.sh
 
+    mkdir -p $HOME/.config/gtk-3.0/
+    ln -sf $PWD/gtk3.ini $HOME/.config/gtk-3.0/settings.ini
+
     ln -sf $PWD/gtkrc-2.0 $HOME/.gtkrc-2.0
     echo "Config files have been replaced with symlinks to the config files in this git repo."
 fi
