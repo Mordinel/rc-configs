@@ -25,8 +25,8 @@ hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-q close
 hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with xterm as fallback
-hc keybind $Mod-b spawn "firefox"
-hc keybind $Mod-e spawn "rofi" "-show" "run"
+hc keybind $Mod-f spawn "firefox"
+hc keybind $Mod-x spawn "rofi" "-show" "run"
 
 # basic movement in tiling and floating mode
 # focusing clients
@@ -89,9 +89,9 @@ hc keybind $Mod-comma  use_index -1 --skip-visible
 # layouting
 hc keybind $Mod-r remove
 hc keybind $Mod-Shift-s floating toggle
-hc keybind $Mod-f fullscreen toggle
+hc keybind $Mod-Shift-f fullscreen toggle
 hc keybind $Mod-s set_attr clients.focus.floating toggle
-hc keybind $Mod-Shift-d set_attr clients.focus.decorated toggle
+#hc keybind $Mod-Shift-d set_attr clients.focus.decorated toggle
 hc keybind $Mod-Shift-m set_attr clients.focus.minimized true
 hc keybind $Mod-Control-m jumpto last-minimized
 hc keybind $Mod-p pseudotile toggle
@@ -117,7 +117,7 @@ hc keybind $Mod-Shift-Tab   cycle_all -1
 hc keybind $Mod-c cycle
 hc keybind $Mod-i jumpto urgent
 
-hc keybind $Mod-Control-x \
+hc keybind $Mod-Shift-d \
    substitute FOCUS "tags.focus.name" \
    foreach CLIENT clients. \
      sprintf MINATT "%c.minimized" CLIENT \
