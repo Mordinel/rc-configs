@@ -12,6 +12,7 @@ xsetroot -solid '#0F1914'
 
 ~/.config/polybar/launch.sh &
 nitrogen --restore &
+picom &
 
 # remove all existing keybindings
 hc keyunbind --all
