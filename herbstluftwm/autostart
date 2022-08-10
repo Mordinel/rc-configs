@@ -8,7 +8,9 @@ hc() {
 
 hc emit_hook reload
 
+# X stuff
 xsetroot -solid '#0F1914'
+xinput --set-prop 15 'libinput Accel Profile Enabled' 0, 1
 
 ~/.config/polybar/launch.sh &
 nitrogen --restore &
@@ -137,7 +139,7 @@ hc set frame_border_width 0
 hc set always_show_frame off
 hc set frame_bg_transparent on
 hc set frame_transparent_width 0
-hc set frame_gap 16
+hc set frame_gap 0
 
 hc attr theme.title_height 15
 hc attr theme.title_when never
@@ -171,9 +173,9 @@ hc attr theme.tiling.outer_width 0
 hc attr theme.background_color '#0F1914'
 
 hc set window_gap 16
-hc set frame_padding 16
-hc set smart_window_surroundings on
-hc set smart_frame_surroundings on
+hc set frame_padding 0
+hc set smart_window_surroundings off
+hc set smart_frame_surroundings off
 hc set mouse_recenter_gap 0
 hc set default_frame_layout horizontal
 
