@@ -51,7 +51,5 @@ then
     link_chk $PWD/polybar $HOME/.config/polybar
     link_chk $PWD/rofi $HOME/.config/rofi
     link_chk $PWD/picom $HOME/.config/picom
-
-    echo "Config files have been replaced with symlinks to the config files in this git repo."
 fi
 

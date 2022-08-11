@@ -43,7 +43,5 @@ then
 
     # ~/.config
     link_chk $PWD/tmux $HOME/.config/tmux
-
-    echo "Config files have been replaced with symlinks to the config files in this git repo."
 fi
 
