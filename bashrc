@@ -25,7 +25,7 @@ fi
 
 export EDITOR="vim"
 export TERM=xterm-256color
-#export PAGER="vimpager"
+export PAGER="vimpager"
 export SYSTEMD_PAGER=""
 
 alias ls='ls --color=auto'
