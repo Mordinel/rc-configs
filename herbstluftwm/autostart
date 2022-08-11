@@ -11,6 +11,7 @@ hc emit_hook reload
 # X stuff
 xsetroot -solid '#0F1914'
 xinput --set-prop 15 'libinput Accel Profile Enabled' 0, 1
+xset -dpms
 
 ~/.config/polybar/launch.sh &
 nitrogen --restore &
