@@ -37,6 +37,7 @@ then
     # home files
     link_chk $PWD/bashrc $HOME/.bashrc
     link_chk $PWD/gtkrc-2.0 $HOME/.gtkrc-2.0
+    link_chk $PWD/Xresources $HOME/.Xresources
 
     # home directories
     mkdir -p $HOME/.vim
