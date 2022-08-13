@@ -36,7 +36,12 @@ hc keybind $Mod-q close
 hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-f spawn "firefox"
 hc keybind $Mod-x spawn "rofi" "-show" "run"
-hc keybind Print spawn "$HOME/src/rc-configs/herbstluftwm/screenshot.sh"
+hc keybind Print spawn "$HOME/.config/herbstluftwm/screenshot.sh"
+
+# layout keybinds
+hc keybind $Mod-Control-Shift-s spawn "$HOME/.config/herbstluftwm/save-layout.sh"
+hc keybind $Mod-Control-Shift-l spawn "$HOME/.config/herbstluftwm/load-layout.sh"
+hc keybind $Mod-Control-Shift-n spawn "$HOME/.config/herbstluftwm/default-layout.sh"
 
 # basic movement in tiling and floating mode
 # focusing clients
@@ -140,15 +145,15 @@ hc keybind $Mod-Shift-d \
 # theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
-hc set frame_border_active_color '#74F8B7CC'
-hc set frame_border_normal_color '#428965CC'
+hc set frame_border_active_color '#74F8B780'
+hc set frame_border_normal_color '#42896530'
 hc set frame_bg_normal_color '#0F1914AA'
 hc set frame_bg_active_color '#0F1914AA'
 hc set frame_border_width 0
 hc set always_show_frame off
 hc set frame_bg_transparent on
 hc set frame_transparent_width 0
-hc set frame_gap 0
+hc set frame_gap 16
 
 hc attr theme.title_height 15
 hc attr theme.title_when multiple_tabs
@@ -181,7 +186,7 @@ done
 hc attr theme.tiling.outer_width 0
 hc attr theme.background_color '#0F1914'
 
-hc set window_gap 16
+hc set window_gap 0
 hc set frame_padding 0
 hc set smart_window_surroundings off
 hc set smart_frame_surroundings off
