@@ -125,6 +125,8 @@ hc keybind $Mod-Tab         cycle_all +1
 hc keybind $Mod-Shift-Tab   cycle_all -1
 hc keybind $Mod-c cycle
 hc keybind $Mod-i jumpto urgent
+hc keybind $Mod-Control-Tab cycle +1
+hc keybind $Mod-Control-Shift-Tab cycle -1
 
 hc keybind $Mod-Shift-d \
    substitute FOCUS "tags.focus.name" \
@@ -149,7 +151,7 @@ hc set frame_transparent_width 0
 hc set frame_gap 0
 
 hc attr theme.title_height 15
-hc attr theme.title_when never
+hc attr theme.title_when multiple_tabs
 hc attr theme.title_font 'IBM Plex Mono:pixelsize=12'  # example using Xft
 # hc attr theme.title_font '-*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*'
 hc attr theme.title_depth 3  # space below the title's baseline
