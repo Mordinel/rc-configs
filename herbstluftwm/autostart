@@ -109,7 +109,7 @@ hc keybind $Mod-s set_attr clients.focus.floating toggle
 #hc keybind $Mod-Shift-d set_attr clients.focus.decorated toggle
 hc keybind $Mod-Shift-m set_attr clients.focus.minimized true
 hc keybind $Mod-Control-m jumpto last-minimized
-hc keybind $Mod-p pseudotile toggle
+hc keybind $Mod-t pseudotile toggle
 
 # The following cycles through the available layouts within a frame, but skips
 # layouts, if the layout change wouldn't affect the actual window positions.
@@ -131,8 +131,8 @@ hc keybind $Mod-Tab         cycle_all --skip-invisible +1
 hc keybind $Mod-Shift-Tab   cycle_all --skip-invisible -1
 hc keybind $Mod-c cycle
 hc keybind $Mod-i jumpto urgent
-hc keybind $Mod-Control-Tab cycle +1
-hc keybind $Mod-Control-Shift-Tab cycle -1
+hc keybind $Mod-n cycle +1
+hc keybind $Mod-p cycle -1
 
 hc keybind $Mod-Shift-d \
    substitute FOCUS "tags.focus.name" \
