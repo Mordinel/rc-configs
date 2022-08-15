@@ -192,7 +192,7 @@ hc set frame_padding 0
 hc set smart_window_surroundings off
 hc set smart_frame_surroundings off
 hc set mouse_recenter_gap 0
-hc set default_frame_layout horizontal
+hc set default_frame_layout max
 
 # rules
 hc unrule -F
