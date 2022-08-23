@@ -4,8 +4,10 @@
     font: "IBM Plex Mono 12";
     foreground: #74F8B7;
     background-color: #0F1914;
+    background: #0F1914;
     active-background: #428965;
-    urgent-background: #CA274D;
+    urgent-background: #0F1914;
+    urgent-foreground: #CA274D;
     selected-background: @active-background;
     selected-urgent-background: @urgent-background;
     selected-active-background: @active-background;
