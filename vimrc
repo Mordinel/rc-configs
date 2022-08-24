@@ -47,20 +47,3 @@ colo default
 filetype plugin indent on
 highlight Normal ctermbg=NONE
 
-"" vim-plug
-"call plug#begin('~/.vim/plugged')
-"
-"" Tab completion for code completion
-"Plug 'ervandew/supertab'
-"let g:SuperTabDefaultCompletionType = "<c-n>"
-"
-"" C++ code completion
-"Plug 'xavierd/clang_complete'
-"
-"" C++ enhanced syntax highlighting
-"Plug 'octol/vim-cpp-enhanced-highlight'
-"
-"" Python code completion
-"Plug 'davidhalter/jedi-vim'
-"
-"call plug#end()
