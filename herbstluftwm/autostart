@@ -158,8 +158,8 @@ hc set frame_gap 8
 
 hc attr theme.title_height 15
 hc attr theme.title_when multiple_tabs
-hc attr theme.title_font 'IBM Plex Mono:pixelsize=12'  # example using Xft
-# hc attr theme.title_font '-*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*'
+#hc attr theme.title_font 'IBM Plex Mono:pixelsize=12'  # example using Xft
+hc attr theme.title_font '-*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*'
 hc attr theme.title_depth 3  # space below the title's baseline
 hc attr theme.active.color '#74F8B7EF'
 hc attr theme.title_color '#0F1914'
