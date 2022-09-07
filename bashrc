@@ -24,6 +24,7 @@ else
 fi
 
 export EDITOR="vim"
+export PAGER="less"
 export TERM=xterm-256color
 export SYSTEMD_PAGER=""
 
