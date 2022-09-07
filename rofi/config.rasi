@@ -1,6 +1,6 @@
 configuration {
  modi: "window,drun,ssh,combi";
- font: "IBM Plex Mono 10";
+ font: "scientifica 16";
  combi-modi: "window,drun,ssh";
  }
 @theme "tektronix"
