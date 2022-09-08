@@ -18,8 +18,8 @@ xset -dpms
 setterm -powerdown 0
 xset s off
 
-~/.config/polybar/launch.sh &
 nitrogen --restore &
+~/.config/polybar/launch.sh &
 picom &
 
 # remove all existing keybindings
