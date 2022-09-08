@@ -1,1 +1,1 @@
-(split horizontal:0.2488:1 (split vertical:0.539:1 (clients max:0 0x2c0004a) (clients max:0 0x3600002)) (split horizontal:0.672:1 (split vertical:0.5167:1 (clients max:0 0x8400001) (clients max:0 0x4a00006)) (split vertical:0.28:1 (clients max:0 0x2c00055) (clients max:1 0x5800021 0x2e00002))))
+(split horizontal:0.2488:1 (split vertical:0.459:1 (clients max:0 0x2c0004a) (clients max:0 0x3600002)) (split horizontal:0.672:1 (split vertical:0.5167:0 (clients max:0) (clients max:0 0x4a00006)) (split vertical:0.28:1 (clients max:0 0x2c00055) (clients max:0 0x800002))))
