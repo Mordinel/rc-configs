@@ -43,6 +43,7 @@ hc keybind Print spawn "$HOME/.config/herbstluftwm/screenshot.sh"
 hc keybind $Mod-Control-Shift-s spawn "$HOME/.config/herbstluftwm/save-layout.sh"
 hc keybind $Mod-Control-Shift-l spawn "$HOME/.config/herbstluftwm/load-layout.sh"
 hc keybind $Mod-Control-Shift-n spawn "$HOME/.config/herbstluftwm/default-layout.sh"
+hc keybind $Mod-Control-Shift-v spawn "$HOME/.config/herbstluftwm/alt-layout.sh"
 
 # basic movement in tiling and floating mode
 # focusing clients
