@@ -151,16 +151,16 @@ hc set frame_border_active_color '#74F8B780'
 hc set frame_border_normal_color '#42896530'
 hc set frame_bg_normal_color '#0F1914AA'
 hc set frame_bg_active_color '#0F1914AA'
-hc set frame_border_width 1
+hc set frame_border_width 0
 hc set always_show_frame off
 hc set frame_bg_transparent on
 hc set frame_transparent_width 0
-hc set frame_gap 8
+hc set frame_gap 0
 
 hc attr theme.title_height 15
 hc attr theme.title_when multiple_tabs
-#hc attr theme.title_font 'IBM Plex Mono:pixelsize=12'  # example using Xft
-hc attr theme.title_font '-*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*'
+hc attr theme.title_font 'IBM Plex Mono:pixelsize=11'  # example using Xft
+#hc attr theme.title_font '-*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*'
 hc attr theme.title_depth 3  # space below the title's baseline
 hc attr theme.active.color '#74F8B7EF'
 hc attr theme.title_color '#0F1914'
