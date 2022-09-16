@@ -147,11 +147,11 @@ hc keybind $Mod-Shift-d \
 # theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
-hc set frame_border_active_color '#74F8B780'
-hc set frame_border_normal_color '#42896530'
+hc set frame_border_active_color '#74F8B7ff'
+hc set frame_border_normal_color '#428965ff'
 hc set frame_bg_normal_color '#0F1914AA'
 hc set frame_bg_active_color '#0F1914AA'
-hc set frame_border_width 0
+hc set frame_border_width 2
 hc set always_show_frame off
 hc set frame_bg_transparent on
 hc set frame_transparent_width 0
@@ -164,16 +164,16 @@ hc attr theme.title_font 'IBM Plex Mono:pixelsize=11'  # example using Xft
 hc attr theme.title_depth 3  # space below the title's baseline
 hc attr theme.active.color '#74F8B7EF'
 hc attr theme.title_color '#0F1914'
-hc attr theme.normal.color '#428965dd'
-hc attr theme.urgent.color '#CA274Ddd'
-hc attr theme.tab_color '#0F1914dd'
-hc attr theme.active.tab_color '#428965dd'
-hc attr theme.active.tab_outer_color '#74F8B7dd'
+hc attr theme.normal.color '#428965ff'
+hc attr theme.urgent.color '#CA274Dff'
+hc attr theme.tab_color '#0F1914ff'
+hc attr theme.active.tab_color '#428965ff'
+hc attr theme.active.tab_outer_color '#74F8B7ff'
 hc attr theme.active.tab_title_color '#74F8B7'
 hc attr theme.normal.title_color '#74F8B7'
 hc attr theme.inner_width 0
 hc attr theme.inner_color '#0F1914'
-hc attr theme.border_width 2
+hc attr theme.border_width 0
 hc attr theme.floating.border_width 2
 hc attr theme.floating.outer_width 0
 hc attr theme.floating.outer_color '#0F1914'
