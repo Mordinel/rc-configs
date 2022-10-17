@@ -43,12 +43,15 @@ then
     # home directories
     mkdir -p $HOME/.vim
     link_chk $PWD/vimrc $HOME/.vim/vimrc
+    mkdir -p $HOME/.scripts
+    link_chk $PWD/scripts $HOME/.scripts
 
     # ~/.config
     link_chk $PWD/tmux $HOME/.config/tmux
     link_chk $PWD/alacritty $HOME/.config/alacritty
     link_chk $PWD/gtk-3.0 $HOME/.config/gtk-3.0
     link_chk $PWD/herbstluftwm $HOME/.config/herbstluftwm
+    link_chk $PWD/i3 $HOME/.config/i3
     link_chk $PWD/polybar $HOME/.config/polybar
     link_chk $PWD/rofi $HOME/.config/rofi
     link_chk $PWD/picom $HOME/.config/picom

@@ -1,6 +1,12 @@
 herbstluftwm
-rofi
 polybar
+i3
+i3status
+i3lock
+pasystray
+nm-applet
+dmenu
+rofi
 picom
 tmux
 vim
@@ -9,3 +15,5 @@ firefox
 alacritty
 nitrogen
 xorg-xinput
+IBM Plex Mono
+Breeze Dark
