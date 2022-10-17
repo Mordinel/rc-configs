@@ -52,6 +52,7 @@ then
     link_chk $PWD/gtk-3.0 $HOME/.config/gtk-3.0
     link_chk $PWD/herbstluftwm $HOME/.config/herbstluftwm
     link_chk $PWD/i3 $HOME/.config/i3
+    link_chk $PWD/i3status $HOME/.config/i3status
     link_chk $PWD/polybar $HOME/.config/polybar
     link_chk $PWD/rofi $HOME/.config/rofi
     link_chk $PWD/picom $HOME/.config/picom
