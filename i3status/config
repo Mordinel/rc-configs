@@ -11,7 +11,7 @@ general {
         interval = 1
 }
 
-order += "ipv6"
+#order += "ipv6"
 order += "wireless _first_"
 order += "ethernet _first_"
 order += "battery all"
@@ -35,11 +35,11 @@ battery all {
 }
 
 disk "/" {
-        format = "DISK: %avail"
+        format = "Remaining brain storage: %avail"
 }
 
 cpu_usage {
-    format = "CPU: %usage"
+    format = "Thermonuclear load: %usage"
 }
 
 memory {

@@ -181,7 +181,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     font pango:IBM Plex Mono 7
-    position       top
+    position bottom
 
     workspace_buttons yes
     binding_mode_indicator no
@@ -227,4 +227,5 @@ exec xset s off
 # programs
 exec nitrogen --restore
 exec picom
+#exec pasystray -n
 
