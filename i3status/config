@@ -22,12 +22,12 @@ order += "tztime local"
 
 wireless _first_ {
         format_up = "W: (%quality at %essid) %ip"
-        format_down = "W: down"
+        format_down = "No wireless WiFi cable connected"
 }
 
 ethernet _first_ {
         format_up = "E: %ip (%speed)"
-        format_down = "E: down"
+        format_down = "No WiFi cable connected"
 }
 
 battery all {
@@ -35,17 +35,17 @@ battery all {
 }
 
 disk "/" {
-        format = "Remaining brain storage: %avail"
+        format = "Flat-Earth Propaganda: %avail"
 }
 
 cpu_usage {
-    format = "Thermonuclear load: %usage"
+    format = "Thermonuclear Load: %usage"
 }
 
 memory {
-        format = "MEM: %used"
+        format = "Loaded Malware: %used"
         threshold_degraded = "10%"
-        format_degraded = "MEM: %free remaining"
+        format_degraded = "Loaded Malware: %free remaining"
 }
 
 tztime local {
