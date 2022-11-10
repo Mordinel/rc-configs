@@ -197,7 +197,7 @@ bar {
           # class            border  backgro text
           active_workspace   #428965 #428965 #0F1914
           focused_workspace  #74F8B7 #74F8B7 #0F1914
-          inactive_workspace #428965 #000000 #74F8B7
+          inactive_workspace #428965 #428965 #0F1914
           urgent_workspace   #A427CA #A427CA #0F1914
     }
 }
@@ -223,6 +223,7 @@ exec xinput --set-prop 15 'libinput Accel Profile Enabled' 0, 1
 exec xset -dpms
 exec setterm -powerdown 0
 exec xset s off
+#exec xrandr --output HDMI-1 --primary
 
 # programs
 exec nitrogen --restore

@@ -2,8 +2,8 @@
 
 * {
     foreground: #74F8B7;
-    background-color: #0F1914;
-    background: #0F1914;
+    background-color: #000000;
+    background: #000000;
     active-background: #428965;
     urgent-background: #0F1914;
     urgent-foreground: #CA274D;
