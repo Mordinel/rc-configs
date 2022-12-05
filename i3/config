@@ -229,4 +229,5 @@ exec xset s off
 exec nitrogen --restore
 exec picom
 #exec pasystray -n
+#exec force-composition-pipeline.sh
 
