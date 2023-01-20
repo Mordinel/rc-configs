@@ -56,5 +56,6 @@ then
     link_chk $PWD/polybar $HOME/.config/polybar
     link_chk $PWD/rofi $HOME/.config/rofi
     link_chk $PWD/picom $HOME/.config/picom
+    link_chk $PWD/nvim $HOME/.config/nvim
 fi
 

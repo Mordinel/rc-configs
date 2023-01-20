@@ -43,5 +43,6 @@ then
 
     # ~/.config
     link_chk $PWD/tmux $HOME/.config/tmux
+    link_chk $PWD/nvim $HOME/.config/nvim
 fi
 
