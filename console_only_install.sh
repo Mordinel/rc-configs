@@ -1,48 +1,33 @@
 #!/bin/bash
 
+if [[ -e "$PWD/util.sh" ]]; then
+    source "$PWD/util.sh"
+else
+    echo "Util script does not exist!"
+    exit 1
+fi
+
 echo "Your current config files will be deleted and replaced."
 read -p "Replace with repo versions? (y/N): " choice
-
-# link with check function symlinks parameter 2 to parameter 1
-#   if param 2 does not exist:
-#     but it also is a symlink:
-#       delete it, the link is broken
-#     create the desired symlink
-#   if param 2 already exists and is a symlink:
-#     do nothing
-#   if param 2 already exists and is not a symlink:
-#     rm -rf it and create the desired symlink
-link_chk() {
-    if [[ -e "$2" ]]; then
-        if [[ -L "$2" ]]; then
-            echo "$2 is already a symlink"
-        else
-            echo "Deleting $2"
-            rm -rf "$2"
-            echo "Linking $2 -> $1"
-            ln -sf "$1" "$2"
-        fi
-    else
-        if [[ -L "$2" ]]; then
-            echo "$2 is a broken link, removing it"
-            unlink "$2"
-        fi
-        echo "Linking $2 -> $1"
-        ln -sf "$1" "$2"
-    fi
-}
 
 if [[ "$choice" =~ ^[yY] ]]
 then
     # home files
-    link_chk $PWD/bashrc $HOME/.bashrc
+    Install $PWD/bashrc $HOME/.bashrc
 
     # home directories
     mkdir -p $HOME/.vim
-    link_chk $PWD/vimrc $HOME/.vim/vimrc
+    Install $PWD/vimrc $HOME/.vim/vimrc
 
     # ~/.config
-    link_chk $PWD/tmux $HOME/.config/tmux
-    link_chk $PWD/nvim $HOME/.config/nvim
+    Install $PWD/tmux $HOME/.config/tmux
+    Install $PWD/nvim $HOME/.config/nvim
+fi
+
+read -p "Run post-install scripts? (y/N): " choice
+if [[ "$choice" =~ ^[yY] ]]
+then
+    # install packer for neovim
+    [[ -e "$PWD/nvim/packer_install.sh" ]] && $PWD/nvim/packer_install.sh
 fi
 

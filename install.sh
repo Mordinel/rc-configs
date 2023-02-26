@@ -1,61 +1,47 @@
 #!/bin/bash
 
+if [[ -e "$PWD/util.sh" ]]; then
+    source "$PWD/util.sh"
+else
+    echo "Util script does not exist!"
+    exit 1
+fi
+
 echo "Your current config files will be deleted and replaced."
 read -p "Replace with repo versions? (y/N): " choice
-
-# link with check function symlinks parameter 2 to parameter 1
-#   if param 2 does not exist:
-#     but it also is a symlink:
-#       delete it, the link is broken
-#     create the desired symlink
-#   if param 2 already exists and is a symlink:
-#     do nothing
-#   if param 2 already exists and is not a symlink:
-#     rm -rf it and create the desired symlink
-link_chk() {
-    if [[ -e "$2" ]]; then
-        if [[ -L "$2" ]]; then
-            echo "$2 is already a symlink"
-        else
-            echo "Deleting $2"
-            rm -rf "$2"
-            echo "Linking $2 -> $1"
-            ln -sf "$1" "$2"
-        fi
-    else
-        if [[ -L "$2" ]]; then
-            echo "$2 is a broken link, removing it"
-            unlink "$2"
-        fi
-        echo "Linking $2 -> $1"
-        ln -sf "$1" "$2"
-    fi
-}
 
 if [[ "$choice" =~ ^[yY] ]]
 then
     # home files
-    link_chk $PWD/bashrc $HOME/.bashrc
-    link_chk $PWD/gtkrc-2.0 $HOME/.gtkrc-2.0
-    link_chk $PWD/Xresources $HOME/.Xresources
-    link_chk $PWD/xprofile $HOME/.xprofile
+    Install $PWD/bashrc $HOME/.bashrc
+    Install $PWD/gtkrc-2.0 $HOME/.gtkrc-2.0
+    Install $PWD/Xresources $HOME/.Xresources
+    Install $PWD/xprofile $HOME/.xprofile
 
     # home directories
     mkdir -p $HOME/.vim
-    link_chk $PWD/vimrc $HOME/.vim/vimrc
+    Install $PWD/vimrc $HOME/.vim/vimrc
     mkdir -p $HOME/.scripts
-    link_chk $PWD/scripts $HOME/.scripts
+    Install $PWD/scripts $HOME/.scripts
 
     # ~/.config
-    link_chk $PWD/tmux $HOME/.config/tmux
-    link_chk $PWD/alacritty $HOME/.config/alacritty
-    link_chk $PWD/gtk-3.0 $HOME/.config/gtk-3.0
-    link_chk $PWD/herbstluftwm $HOME/.config/herbstluftwm
-    link_chk $PWD/i3 $HOME/.config/i3
-    link_chk $PWD/i3status $HOME/.config/i3status
-    link_chk $PWD/polybar $HOME/.config/polybar
-    link_chk $PWD/rofi $HOME/.config/rofi
-    link_chk $PWD/picom $HOME/.config/picom
-    link_chk $PWD/nvim $HOME/.config/nvim
+    Install $PWD/tmux $HOME/.config/tmux
+    Install $PWD/alacritty $HOME/.config/alacritty
+    Install $PWD/gtk-3.0 $HOME/.config/gtk-3.0
+    Install $PWD/herbstluftwm $HOME/.config/herbstluftwm
+    Install $PWD/i3 $HOME/.config/i3
+    Install $PWD/i3status $HOME/.config/i3status
+    Install $PWD/polybar $HOME/.config/polybar
+    Install $PWD/rofi $HOME/.config/rofi
+    Install $PWD/picom $HOME/.config/picom
+    Install $PWD/nvim $HOME/.config/nvim
+
+fi
+
+read -p "Run post-install scripts? (y/N): " choice
+if [[ "$choice" =~ ^[yY] ]]
+then
+    # install packer for neovim
+    [[ -e "$PWD/nvim/packer_install.sh" ]] && $PWD/nvim/packer_install.sh
 fi
 
