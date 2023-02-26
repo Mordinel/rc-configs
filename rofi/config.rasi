@@ -3,4 +3,4 @@ configuration {
  font: "IBM Plex Mono 11";
  combi-modi: "window,drun,ssh";
  }
-@theme "tektronix"
+@theme "darkcold"

@@ -190,16 +190,16 @@ bar {
     tray_padding 0
 
     status_command i3status
-    colors {
-          separator  #BEBEBE
-          background #000000
-          statusline #74F8B7
-          # class            border  backgro text
-          active_workspace   #428965 #428965 #0F1914
-          focused_workspace  #74F8B7 #74F8B7 #0F1914
-          inactive_workspace #428965 #428965 #0F1914
-          urgent_workspace   #A427CA #A427CA #0F1914
-    }
+#    colors {
+#          separator  #BEBEBE
+#          background #000000
+#          statusline #74F8B7
+#          # class            border  backgro text
+#          active_workspace   #428965 #428965 #0F1914
+#          focused_workspace  #74F8B7 #74F8B7 #0F1914
+#          inactive_workspace #428965 #428965 #0F1914
+#          urgent_workspace   #A427CA #A427CA #0F1914
+#    }
 }
 
 # Borders
@@ -207,12 +207,12 @@ default_border normal 2
 
 # Colors
 # class                 border  backgro text    indicat child_border
-client.focused          #74f8b7 #74F8B7 #0F1914 #4DCA27 #74f8b7
-client.focused_inactive #428965 #428965 #0F1914 #4DCA27 #428965
-client.unfocused        #428965 #000000 #74F8B7 #428965 #428965
-client.urgent           #A427CA #A427CA #0F1914 #A427CA #428965
-client.placeholder      #000d18 #0c0c0c #ffffff #000d18 #0c0c0c
-client.background       #ffffff
+#client.focused          #74f8b7 #74F8B7 #0F1914 #4DCA27 #74f8b7
+#client.focused_inactive #428965 #428965 #0F1914 #4DCA27 #428965
+#client.unfocused        #428965 #000000 #74F8B7 #428965 #428965
+#client.urgent           #A427CA #A427CA #0F1914 #A427CA #428965
+#client.placeholder      #000d18 #0c0c0c #ffffff #000d18 #0c0c0c
+#client.background       #ffffff
 
 # x shit
 exec xsetroot -solid '#000000'

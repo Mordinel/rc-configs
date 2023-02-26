@@ -11,7 +11,7 @@ color="33"
 # if primary user then green
 if [ $(id -u) -eq 1000 ];
 then
-    color="32"
+    color="34"
 fi
 
 # if root then omit 'username@' and be red
