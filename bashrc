@@ -8,7 +8,7 @@ fi
 # default to yellow
 color="33"
 
-# if primary user then green
+# if primary user then blue
 if [ $(id -u) -eq 1000 ];
 then
     color="34"
