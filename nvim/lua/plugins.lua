@@ -1,9 +1,16 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
+  -- Package manager
   use 'wbthomason/packer.nvim'
 
+  -- Colourschemes
   use 'widatama/vim-phoenix'
+  use {
+      "jesseleite/nvim-noirbuddy",
+      requires = { "tjdevries/colorbuddy.nvim", branch = "dev" }
+  }
+  -- Colourschemes
 
   use {
       'nvim-telescope/telescope.nvim', tag = '0.1.1',
