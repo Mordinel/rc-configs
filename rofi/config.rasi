@@ -1,6 +1,6 @@
 configuration {
  modi: "window,drun,ssh,combi";
- font: "IBM Plex Mono 11";
+ font: "IBM Plex Mono 13";
  combi-modi: "window,drun,ssh";
  }
-@theme "darkcold"
+@theme "white"

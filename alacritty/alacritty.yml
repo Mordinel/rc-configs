@@ -154,7 +154,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 7
+  size: 11
   #size: 16.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
@@ -180,7 +180,7 @@ colors:
   # Default colors
   primary:
     background: '#000000'
-    foreground: '#74F8B7'
+    foreground: '#FFFFFF'
 
     # Bright and dim foreground colors
     #
@@ -251,24 +251,24 @@ colors:
   # Normal colors
   normal:
     black:   '#000000'
-    red:     '#CA274D'
-    green:   '#4DCA27'
-    yellow:  '#CAA427'
-    blue:    '#274DCA'
-    magenta: '#A427CA'
-    cyan:    '#27CAA4'
-    white:   '#B6B6B6'
+    red:     '#FF0000'
+    green:   '#00FF00'
+    yellow:  '#FFFF00'
+    blue:    '#0000FF'
+    magenta: '#FF00FF'
+    cyan:    '#00FFFF'
+    white:   '#FFFFFF'
 
   # Bright colors
   bright:
-    black:   '#808080'
-    red:     '#E98DA3'
-    green:   '#A3E98D'
-    yellow:  '#E9D48D'
-    blue:    '#8DA3E9'
-    magenta: '#D48DE9'
-    cyan:    '#8DE9D4'
-    white:   '#FFFFFF'
+    black:   '#333333'
+    red:     '#FF3333'
+    green:   '#33FF33'
+    yellow:  '#FFFF33'
+    blue:    '#3333FF'
+    magenta: '#FF33FF'
+    cyan:    '#33FFFF'
+    white:   '#CCCCCC'
 
   # Dim colors
   #

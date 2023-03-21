@@ -5,14 +5,14 @@ then
     . ~/.bash_aliases;
 fi
 
-# default to yellow
-color="33"
+# default to red
+color="31"
 
 # if primary user then blue
-if [ $(id -u) -eq 1000 ];
-then
-    color="34"
-fi
+#if [ $(id -u) -eq 1000 ];
+#then
+#    color="34"
+#fi
 
 # if root then omit 'username@' and be red
 if [ $(id -u) -eq 0 ];
@@ -38,4 +38,4 @@ alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-#alias open='2>/dev/null xdg-open'
+alias open='2>/dev/null xdg-open'

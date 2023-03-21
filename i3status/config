@@ -7,7 +7,7 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        colors = true
+        colors = false
         interval = 1
 }
 
@@ -22,12 +22,12 @@ order += "tztime local"
 
 wireless _first_ {
         format_up = "W: (%quality at %essid) %ip"
-        format_down = "No wireless WiFi cable connected"
+        format_down = "No WLAN"
 }
 
 ethernet _first_ {
         format_up = "E: %ip (%speed)"
-        format_down = "No WiFi cable connected"
+        format_down = "No LAN"
 }
 
 battery all {
@@ -49,5 +49,5 @@ memory {
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+        format = "%H:%M:%S %Y-%m-%d"
 }
