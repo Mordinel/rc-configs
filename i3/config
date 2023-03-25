@@ -83,9 +83,6 @@ bindsym $mod+q kill
 #bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 bindsym $mod+x exec "rofi -modi run,run -show run"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # split in horizontal orientation
 bindsym $mod+b split h
@@ -112,13 +109,6 @@ bindsym $mod+a focus parent
 
 # focus the child container
 bindsym $mod+d focus child
-
-# move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
-
-# Show the next scratchpad window or hide the focused scratchpad window.
-# If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -159,16 +149,16 @@ mode "resize" {
     # Pressing right will grow the window’s width.
     # Pressing up will shrink the window’s height.
     # Pressing down will grow the window’s height.
-    bindsym h resize shrink width  10 px or 10 ppt
-    bindsym j resize grow   height 10 px or 10 ppt
-    bindsym k resize shrink height 10 px or 10 ppt
-    bindsym l resize grow   width  10 px or 10 ppt
+    bindsym h resize shrink width  1 px or 1 ppt
+    bindsym j resize grow   height 1 px or 1 ppt
+    bindsym k resize shrink height 1 px or 1 ppt
+    bindsym l resize grow   width  1 px or 1 ppt
 
     # same bindings, but for the arrow keys
-    bindsym Left  resize shrink width  10 px or 10 ppt
-    bindsym Down  resize grow   height 10 px or 10 ppt
-    bindsym Up    resize shrink height 10 px or 10 ppt
-    bindsym Right resize grow   width  10 px or 10 ppt
+    bindsym Left  resize shrink width  1 px or 1 ppt
+    bindsym Down  resize grow   height 1 px or 1 ppt
+    bindsym Up    resize shrink height 1 px or 1 ppt
+    bindsym Right resize grow   width  1 px or 1 ppt
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -184,10 +174,10 @@ bar {
     position bottom
 
     workspace_buttons yes
-    binding_mode_indicator no
+    binding_mode_indicator yes
 
     tray_output primary
-    tray_padding 0
+    tray_padding 5
 
     status_command i3status
     colors {
@@ -226,7 +216,6 @@ exec xset s off
 exec xrandr --output HDMI-1 --primary
 
 # programs
-#exec nitrogen --restore
 exec picom
 exec pasystray -n
 exec force-composition-pipeline.sh
