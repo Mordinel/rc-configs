@@ -28,6 +28,7 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "100"
 vim.cmd('colo phoenix')
+vim.cmd('PhoenixRed')
 
 vim.opt.mouse = ""
 
