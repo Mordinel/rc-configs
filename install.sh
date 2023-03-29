@@ -16,6 +16,7 @@ then
     Install $PWD/bashrc $HOME/.bashrc
     Install $PWD/gtkrc-2.0 $HOME/.gtkrc-2.0
     Install $PWD/Xresources $HOME/.Xresources
+    Install $PWD/Xresources $HOME/.Xdefaults
     Install $PWD/xprofile $HOME/.xprofile
 
     # home directories
@@ -31,6 +32,7 @@ then
     Install $PWD/herbstluftwm $HOME/.config/herbstluftwm
     Install $PWD/i3 $HOME/.config/i3
     Install $PWD/i3status $HOME/.config/i3status
+    Install $PWD/i3 $HOME/.config/sway
     Install $PWD/polybar $HOME/.config/polybar
     Install $PWD/rofi $HOME/.config/rofi
     Install $PWD/picom $HOME/.config/picom
