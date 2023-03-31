@@ -15,6 +15,7 @@
 }
 
 #window {
+    width: 32em;
     background-color: @background;
     border:           1;
     border-radius: 0;
