@@ -205,18 +205,10 @@ client.placeholder      #000d18 #0c0c0c #ffffff #000d18 #0c0c0c
 client.background       #ffffff
 
 # x shit
-exec xsetroot -solid '#000000'
-exec xrdb ~/.Xresources
-exec xinput --set-prop 13 'libinput Accel Profile Enabled' 0, 1
-exec xinput --set-prop 14 'libinput Accel Profile Enabled' 0, 1
-exec xinput --set-prop 15 'libinput Accel Profile Enabled' 0, 1
-exec xset -dpms
-exec setterm -powerdown 0
-exec xset s off
-exec xrandr --output HDMI-1 --primary
+exec ~/.scripts/set_xshit.sh
 
 # programs
 exec picom
 exec pasystray -n
-exec force-composition-pipeline.sh
+exec ~/.scripts/force-composition-pipeline.sh
 
