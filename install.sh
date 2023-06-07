@@ -29,11 +29,9 @@ then
     Install $PWD/tmux $HOME/.config/tmux
     Install $PWD/alacritty $HOME/.config/alacritty
     Install $PWD/gtk-3.0 $HOME/.config/gtk-3.0
-    Install $PWD/herbstluftwm $HOME/.config/herbstluftwm
     Install $PWD/i3 $HOME/.config/i3
     Install $PWD/i3status $HOME/.config/i3status
     Install $PWD/i3 $HOME/.config/sway
-    Install $PWD/polybar $HOME/.config/polybar
     Install $PWD/rofi $HOME/.config/rofi
     Install $PWD/picom $HOME/.config/picom
     Install $PWD/nvim $HOME/.config/nvim
