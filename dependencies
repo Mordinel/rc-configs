@@ -1,5 +1,3 @@
-herbstluftwm
-polybar
 i3
 i3status
 i3lock
@@ -13,7 +11,6 @@ vim
 maim
 firefox
 alacritty
-nitrogen
 xorg-xinput
-IBM Plex Mono
 Breeze Dark
+Berkeley Mono
