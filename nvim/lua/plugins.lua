@@ -7,11 +7,6 @@ return require('packer').startup(function(use)
   -- Colourschemes
   use 'widatama/vim-phoenix'
 
-  use {
-      'nvim-telescope/telescope.nvim', tag = '0.1.1',
-      requires = { {'nvim-lua/plenary.nvim'} }
-  }
-
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use('nvim-treesitter/playground')
 
