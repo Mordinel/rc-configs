@@ -12,8 +12,8 @@ lsp.setup_nvim_cmp({
 
 lsp.on_attach(function()
     local opts = {buffer = bufnr, remap = false}
-
-    vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+    vim.diagnostic.config({ virtual_text = true })
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 end)
 
 lsp.setup()
