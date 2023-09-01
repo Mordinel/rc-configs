@@ -35,17 +35,17 @@ battery all {
 }
 
 disk "/" {
-        format = "Flat-Earth Propaganda: %avail"
+        format = "DISK(remaining): %avail"
 }
 
 cpu_usage {
-    format = "Thermonuclear Load: %usage"
+    format = "CPU(usage): %usage"
 }
 
 memory {
-        format = "Loaded Malware: %used"
+        format = "RAM(used): %used"
         threshold_degraded = "10%"
-        format_degraded = "Loaded Malware: %free remaining"
+        format_degraded = "RAM(remaining): %free"
 }
 
 tztime local {
