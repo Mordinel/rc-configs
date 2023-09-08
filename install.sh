@@ -14,6 +14,7 @@ if [[ "$choice" =~ ^[yY] ]]
 then
     # home files
     Install $PWD/bashrc $HOME/.bashrc
+    Install $PWD/zshrc $HOME/.zshrc
     Install $PWD/gtkrc-2.0 $HOME/.gtkrc-2.0
     Install $PWD/Xresources $HOME/.Xresources
     Install $PWD/Xresources $HOME/.Xdefaults

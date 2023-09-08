@@ -14,6 +14,7 @@ if [[ "$choice" =~ ^[yY] ]]
 then
     # home files
     Install $PWD/bashrc $HOME/.bashrc
+    Install $PWD/zshrc $HOME/.zshrc
 
     # home directories
     mkdir -p $HOME/.vim
