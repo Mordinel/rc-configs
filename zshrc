@@ -19,8 +19,13 @@ bindkey '\e[1;5C' forward-word
 bindkey '\eOH' beginning-of-line
 bindkey '\eOF' end-of-line
 
+fpath+=~/.zfunc
+
 export EDITOR="vim"
 export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+export PATH="$HOME/.scripts:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 alias vim='nvim'
 alias ls='ls --color=auto'

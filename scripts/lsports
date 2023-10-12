@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+lsof -n -i -P | grep -i "listen" | column -t
