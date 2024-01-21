@@ -12,8 +12,8 @@ else
     export PS1="[\u@\h \w]\$ "
 fi
 
-export PATH="~/.local/bin:$PATH"
 export PATH="~/.scripts:$PATH"
+export PATH="~/.local/bin:$PATH"
 export PATH="~/.cargo/bin:$PATH"
 
 export EDITOR="vim"
@@ -27,4 +27,4 @@ alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias open='2>/dev/null xdg-open'
+alias ip='ip --color=auto'
