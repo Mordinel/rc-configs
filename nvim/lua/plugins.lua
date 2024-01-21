@@ -33,4 +33,6 @@ return require('packer').startup(function(use)
       }
   }
 
+  use 'Hoffs/omnisharp-extended-lsp.nvim'
+
 end)
