@@ -1,9 +1,8 @@
-
 if [ $(id -u) -eq 0 ];
 then
-    PS1="%F{red}%m%f%F{fg}:[%f%B%F{red}%1~%f%b%F{fg}]:%f"
+    PS1="[%n@%m %~]# "
 else
-    PS1="%F{red}%n%f%F{fg}@%f%F{red}%m%f%F{fg}:[%f%B%F{red}%1~%f%b%F{fg}]:%f"
+    PS1="[%n@%m %~]\$ "
 fi
 
 bindkey -e

@@ -5,22 +5,11 @@ then
     . ~/.bash_aliases;
 fi
 
-# default to red
-color="31"
-
-# if primary user then blue
-#if [ $(id -u) -eq 1000 ];
-#then
-#    color="34"
-#fi
-
-# if root then omit 'username@' and be red
 if [ $(id -u) -eq 0 ];
 then
-    color="31"
-    export PS1="\[\e[0;"$color"m\]\h\[\e[1;37m\]:[\[\e[1;"$color"m\]\W\[\e[1;37m\]]:\[\e[0m\]"
+    export PS1="[\u@\h \w]# "
 else
-    export PS1="\[\e[0;"$color"m\]\u\[\e[1;37m\]@\[\e[0;"$color"m\]\h\[\e[1;37m\]:[\[\e[1;"$color"m\]\W\[\e[1;37m\]]:\[\e[0m\]"
+    export PS1="[\u@\h \w]\$ "
 fi
 
 export PATH="~/.local/bin:$PATH"
