@@ -27,8 +27,7 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "100"
-vim.cmd('colo phoenix')
-vim.cmd('PhoenixRed')
+vim.cmd('colo sunbather')
 
 vim.opt.mouse = ""
 
