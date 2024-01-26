@@ -5,7 +5,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- Colourschemes
-  use 'nikolvs/vim-sunbather'
+  use 'Mordinel/vim-sunsurfer'
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use('nvim-treesitter/playground')
