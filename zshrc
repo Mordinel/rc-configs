@@ -1,8 +1,8 @@
 if [ $(id -u) -eq 0 ];
 then
-    PS1="[%n@%m %~]# "
+    PS1="[%n@%m %1~]# "
 else
-    PS1="[%n@%m %~]\$ "
+    PS1="[%n@%m %1~]\$ "
 fi
 
 bindkey -e
