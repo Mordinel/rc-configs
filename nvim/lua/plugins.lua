@@ -35,6 +35,4 @@ return require('packer').startup(function(use)
 
   -- for viewing decompiled .NET IL code as C#
   -- use 'Hoffs/omnisharp-extended-lsp.nvim'
-
-  -- use 'github/copilot.vim'
 end)
