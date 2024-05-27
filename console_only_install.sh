@@ -19,6 +19,8 @@ then
     # home directories
     mkdir -p $HOME/.vim
     Install $PWD/vimrc $HOME/.vim/vimrc
+    mkdir -p $HOME/.scripts
+    Install $PWD/scripts $HOME/.scripts
 
     # ~/.config
     Install $PWD/tmux $HOME/.config/tmux
