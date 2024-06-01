@@ -37,3 +37,9 @@ vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+vim.api.nvim_create_user_command('E',
+    function()
+        vim.cmd('Explore')
+    end,
+{})
+
