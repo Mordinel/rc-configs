@@ -25,6 +25,7 @@ export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 export PATH="$HOME/.scripts:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 
 alias vim='nvim'
 alias ls='ls --color=auto'
