@@ -132,7 +132,7 @@ yellow  = "#E9D48D"
 # Allowed values are CellForeground and CellBackground, which reference the
 # affected cell, or hexadecimal colors like #ff00ff.
 [colors.cursor]
-cursor = "#00FF00"
+cursor = "CellForeground"
 text = "CellBackground"
 
 # Vi mode cursor colors
