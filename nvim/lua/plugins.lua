@@ -7,6 +7,8 @@ return require('packer').startup(function(use)
   -- Colourschemes
   use 'Mordinel/vim-sunsurfer'
 
+  use 'tpope/vim-fugitive'
+
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use('nvim-treesitter/playground')
 
