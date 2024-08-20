@@ -17,8 +17,18 @@ title = "scary black box"
 # The value `0.0` is completely transparent and `1.0` is opaque.
 opacity = 1.0
 
+#Request compositor to blur content behind transparent windows.
+#
+#Default: false
+blur = false
+
 # Allow terminal applications to change Alacritty's window title.
 dynamic_title = false
+
+#Prefer resizing window by discrete steps equal to cell dimensions.
+#
+#Default: false
+resize_increments = true
 
 # Startup Mode (changes require restart)
 #
@@ -79,7 +89,15 @@ history = 100000
 multiplier = 3
 
 [font]
-size = 16
+# Font size in points.
+#
+# Default: 11.25
+size = 14
+
+#When true, Alacritty will use a custom built-in font for box drawing characters (Unicode points U+2500 - U+259F) and powerline symbols (Unicode points U+E0B0 - U+E0B3).
+#
+#Default: true
+builtin_box_drawing = true
 
 [font.normal]
 family = "Berkeley Mono"
