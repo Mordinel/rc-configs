@@ -24,14 +24,15 @@ export EDITOR="vim"
 export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 export PATH="$HOME/.scripts:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/go/bin:$PATH"
+#export PATH="$HOME/.cargo/bin:$PATH"
+#export PATH="$HOME/go/bin:$PATH"
+#export PATH="/opt/homebrew/bin:$PATH"
 
-alias vim='nvim'
+#alias vim='nvim'
 alias ls='ls --color=auto'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias ip='ip --color=auto'
+#alias ip='ip --color=auto'
 
