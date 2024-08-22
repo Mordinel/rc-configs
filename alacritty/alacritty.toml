@@ -18,16 +18,12 @@ title = "scary black box"
 opacity = 1.0
 
 #Request compositor to blur content behind transparent windows.
-#
-#Default: false
 blur = false
 
 # Allow terminal applications to change Alacritty's window title.
 dynamic_title = false
 
 #Prefer resizing window by discrete steps equal to cell dimensions.
-#
-#Default: false
 resize_increments = true
 
 # Startup Mode (changes require restart)
