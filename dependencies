@@ -1,16 +1,20 @@
-i3
-i3status
-i3lock
-pasystray
-nm-applet
-dmenu
-rofi
-picom
-tmux
-vim
-maim
-firefox
-alacritty
-xorg-xinput
-Breeze Dark
-Berkeley Mono
+Generic:
+    tmux
+    vim
+    nvim
+    alacritty
+    Berkeley Mono
+
+Linux:
+    i3
+    i3status
+    i3lock
+    pasystray
+    nm-applet
+    dmenu
+    rofi
+    picom
+    maim
+    Breeze Dark
+    xorg-xinput
+

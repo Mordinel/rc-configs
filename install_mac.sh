@@ -24,6 +24,7 @@ then
 
     # ~/.config
     Install $PWD/tmux $HOME/.config/tmux
+    Install $PWD/alacritty $HOME/.config/alacritty
     Install $PWD/nvim $HOME/.config/nvim
 fi
 
