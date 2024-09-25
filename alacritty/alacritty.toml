@@ -88,7 +88,7 @@ multiplier = 3
 # Font size in points.
 #
 # Default: 11.25
-size = 14
+size = 14.5
 
 #When true, Alacritty will use a custom built-in font for box drawing characters (Unicode points U+2500 - U+259F) and powerline symbols (Unicode points U+E0B0 - U+E0B3).
 #
@@ -113,7 +113,7 @@ style = "Bold Italic"
 
 [colors]
 # If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors = true
+draw_bold_text_with_bright_colors = false
 
 [colors.primary]
 background = "#000000"
