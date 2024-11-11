@@ -58,7 +58,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 --})
 
 -- OCaml
-require('lspconfig').ocamllsp.setup{}
+--require('lspconfig').ocamllsp.setup{}
 
 -- Omnisharp Extended
 --local omnisharp_ext = require("omnisharp_extended")
