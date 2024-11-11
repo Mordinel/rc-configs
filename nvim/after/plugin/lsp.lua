@@ -21,6 +21,30 @@ lsp.on_attach(function()
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 end)
 
+vim.api.nvim_create_autocmd('LspAttach', {
+    group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+    callback = function(ev)
+        vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
+        local opts = { buffer = ev.buf }
+
+        -- gotos
+        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+        vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+        vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+
+        -- goto diagnostics
+        vim.keymap.set('n', 'gl', vim.diagnostic.open_float, opts)
+        vim.keymap.set('n', 'gnl', vim.diagnostic.goto_next, opts)
+        vim.keymap.set('n', 'gpl', vim.diagnostic.goto_prev, opts)
+
+        -- docs
+        vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+
+        vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
+        vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
+    end,
+})
+
 -- Pylsp
 --lsp.configure('pylsp', {
 --    settings = {
@@ -32,6 +56,9 @@ end)
 --        },
 --    },
 --})
+
+-- OCaml
+require('lspconfig').ocamllsp.setup{}
 
 -- Omnisharp Extended
 --local omnisharp_ext = require("omnisharp_extended")
@@ -45,32 +72,5 @@ end)
 --require('lspconfig').sourcekit.setup {
 --  cmd = {'/Library/Developer/CommandLineTools/usr/bin/sourcekit-lsp'}
 --}
---vim.api.nvim_create_autocmd('LspAttach', {
---  group = vim.api.nvim_create_augroup('UserLspConfig', {}),
---  callback = function(ev)
---    --enable omnifunc completion
---    vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
---
---    -- buffer local mappings
---    local opts = { buffer = ev.buf }
---    -- go to definition
---    vim.keymap.set('n','gd',vim.lsp.buf.definition,opts)
---    --puts doc header info into a float page
---    vim.keymap.set('n','K',vim.lsp.buf.hover,opts)
---
---    -- workspace management. Necessary for multi-module projects
---    --vim.keymap.set('n','<space>wa',vim.lsp.buf.add_workspace_folder, opts)
---    --vim.keymap.set('n','<space>wr',vim.lsp.buf.remove_workspace_folder, opts)
---    --vim.keymap.set('n','<space>wl',function()
---    --        print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
---    --end,opts)
---
---    -- add LSP code actions
---    vim.keymap.set({'n','v'},'<space>ca',vim.lsp.buf.code_action,opts)                
---
---    -- find references of a type
---    vim.keymap.set('n','gr',vim.lsp.buf.references,opts)
---  end,
---})
 
 lsp.setup()
