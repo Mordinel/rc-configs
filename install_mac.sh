@@ -15,6 +15,7 @@ then
     # home files
     Install $PWD/bashrc $HOME/.bashrc
     Install $PWD/zshrc $HOME/.zshrc
+    Install $PWD/global_gitignore $HOME/.gitignore
 
     # home directories
     mkdir -p $HOME/.vim
