@@ -34,8 +34,9 @@ clipboard-paste-bracketed-safe = true
 image-storage-limit = 320000000
 copy-on-select = false
 quit-after-last-window-closed = true
-shell-integration-features = cursor,no-sudo,title
+shell-integration-features = no-cursor,no-sudo,title
 
+macos-titlebar-style = native
 macos-titlebar-proxy-icon = hidden
 macos-option-as-alt = true
 macos-icon = custom-style
