@@ -29,6 +29,7 @@ then
     # ~/.config
     Install $PWD/tmux $HOME/.config/tmux
     Install $PWD/alacritty $HOME/.config/alacritty
+    Install $PWD/ghostty $HOME/.config/ghostty
     Install $PWD/gtk-3.0 $HOME/.config/gtk-3.0
     Install $PWD/i3 $HOME/.config/i3
     Install $PWD/i3status $HOME/.config/i3status

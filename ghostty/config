@@ -1,0 +1,47 @@
+font-family = Berkeley Mono
+font-feature = -calt -liga -dlig
+font-size = 15
+font-thicken = true
+
+grapheme-width-method = unicode
+freetype-load-flags = hinting,force-autohint,monochrome,autohint
+
+minimum-contrast = 1
+theme = dark:genetic, light:genetic-bright
+
+cursor-style = block
+cursor-click-to-move = true
+mouse-hide-while-typing = false
+mouse-shift-capture = false
+mouse-scroll-multiplier = 1
+background-opacity = 1
+
+scrollback-limit = 10000000
+
+window-inherit-font-size = false
+window-colorspace = display-p3
+
+window-height = 40
+window-width = 120
+window-save-state = never
+window-step-resize = true
+
+clipboard-read = deny
+clipboard-write = allow
+clipboard-paste-protection = true
+clipboard-paste-bracketed-safe = true
+
+image-storage-limit = 320000000
+copy-on-select = false
+quit-after-last-window-closed = true
+shell-integration-features = cursor,no-sudo,title
+
+macos-titlebar-proxy-icon = hidden
+macos-option-as-alt = true
+macos-icon = custom-style
+macos-icon-frame = aluminum
+macos-icon-ghost-color = #00ff00
+macos-icon-screen-color = #000000
+
+bold-is-bright = false
+

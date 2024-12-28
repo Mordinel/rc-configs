@@ -6,6 +6,7 @@ return require('packer').startup(function(use)
 
   -- Colourschemes
   use 'Mordinel/vim-sunsurfer'
+  use 'f-person/auto-dark-mode.nvim'
 
   use 'tpope/vim-fugitive'
 
