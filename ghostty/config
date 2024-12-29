@@ -20,11 +20,13 @@ scrollback-limit = 10000000
 
 window-inherit-font-size = false
 window-colorspace = display-p3
-
 window-height = 40
 window-width = 120
 window-save-state = never
 window-step-resize = true
+window-inherit-working-directory = false
+
+working-directory = home
 
 clipboard-read = deny
 clipboard-write = allow
