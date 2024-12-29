@@ -11,7 +11,7 @@ theme = dark:genetic, light:genetic-bright
 
 cursor-style = block
 cursor-click-to-move = true
-mouse-hide-while-typing = false
+mouse-hide-while-typing = true
 mouse-shift-capture = false
 mouse-scroll-multiplier = 1
 background-opacity = 1
