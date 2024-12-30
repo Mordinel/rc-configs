@@ -37,6 +37,7 @@ image-storage-limit = 320000000
 copy-on-select = false
 quit-after-last-window-closed = true
 shell-integration-features = no-cursor,no-sudo,title
+term = xterm-256color
 
 macos-titlebar-style = native
 macos-titlebar-proxy-icon = hidden
