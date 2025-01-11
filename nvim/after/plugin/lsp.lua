@@ -1,10 +1,5 @@
 local lsp = require("lsp-zero")
 lsp.preset("recommended")
---lsp.ensure_installed({
---    'rust_analyzer',
---    'pylsp',
---    'omnisharp',
---})
 
 local cmp = require("cmp")
 local cmp_mappings = lsp.defaults.cmp_mappings({
@@ -44,6 +39,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
     end,
 })
+
+-- rust-analyzer
+--require('lspconfig').rust_analyzer.setup {
+--    cmd = { "rust-analyzer" },
+--}
 
 -- Pylsp
 --lsp.configure('pylsp', {
