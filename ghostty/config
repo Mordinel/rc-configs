@@ -42,10 +42,6 @@ term = xterm-256color
 macos-titlebar-style = native
 macos-titlebar-proxy-icon = hidden
 macos-option-as-alt = true
-macos-icon = custom-style
-macos-icon-frame = aluminum
-macos-icon-ghost-color = #00ff00
-macos-icon-screen-color = #000000
 
 bold-is-bright = false
 
