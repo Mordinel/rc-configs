@@ -36,6 +36,12 @@ return require('packer').startup(function(use)
       }
   }
 
+  -- for TeX
+  use {
+    'lervag/vimtex',
+    tag = "v2.16",
+  }
+
   -- for viewing decompiled .NET IL code as C#
   -- use 'Hoffs/omnisharp-extended-lsp.nvim'
 end)
