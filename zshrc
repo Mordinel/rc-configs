@@ -13,8 +13,8 @@ bindkey '^K' kill-line
 bindkey '^W' backward-kill-word
 bindkey '^Y' yank
 bindkey '^R' history-incremental-search-backward
-#bindkey '\e[1;5D' backward-word
-#bindkey '\e[1;5C' forward-word
+bindkey '\e[1;5D' backward-word
+bindkey '\e[1;5C' forward-word
 bindkey '\eOH' beginning-of-line
 bindkey '\eOF' end-of-line
 
@@ -36,4 +36,3 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 #alias ip='ip --color=auto'
 
-#[[ ! -r "$HOME/.opam/opam-init/init.zsh" ]] || source "$HOME/.opam/opam-init/init.zsh" > /dev/null 2> /dev/null

@@ -36,6 +36,11 @@ return require('packer').startup(function(use)
       }
   }
 
+  --use {
+  --    'neoclide/coc.nvim',
+  --    branch = 'release',
+  --}
+
   -- for TeX
   -- use {
   --   'lervag/vimtex',
