@@ -1,5 +1,5 @@
 font-family = Berkeley Mono Medium
-font-thicken = true
+font-thicken = false
 
 background = #000000
 foreground = #CCCCCC

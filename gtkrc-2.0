@@ -1,5 +1,6 @@
-gtk-icon-theme-name = "HighContrast"
-gtk-theme-name = "HighContrastInverse"
+gtk-icon-theme-name = "Adwaita-dark"
+gtk-theme-name = "Adwaita-dark"
 gtk-font-name = "Berkeley Mono 11"
 gtk-cursor-theme-name = "Adwaita"
 gtk-cursor-theme-size = "16"
+gtk-application-prefer-dark-theme = "true"
