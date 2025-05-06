@@ -1,22 +1,12 @@
 vim.opt.signcolumn = 'yes'
 
--- Floating window borders
-vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
-    vim.lsp.handlers.hover,
-    { border = 'rounded' }
-)
-vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
-    vim.lsp.handlers.signature_help,
-    { border = 'rounded' }
-)
-
 -- Errors & Warnings
 vim.diagnostic.config({
     virtual_text = true,
     severity_sort = true,
     float = {
         style  = 'minimal',
-        border = 'rounded',
+        border = 'single',
         header = '',
         prefix = '',
     },
@@ -51,17 +41,16 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
         -- goto diagnostics
         vim.keymap.set('n', 'gl', vim.diagnostic.open_float, opts)
-        vim.keymap.set('n', 'gnl', vim.diagnostic.goto_next, opts)
-        vim.keymap.set('n', 'gpl', vim.diagnostic.goto_prev, opts)
+        vim.keymap.set('n', 'gnl', function() vim.diagnostic.jump({count= 1, float=true}) end, opts)
+        vim.keymap.set('n', 'gbl', function() vim.diagnostic.jump({count=-1, float=true}) end, opts)
 
         -- docs
-        vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+        vim.keymap.set('n', 'K', function() vim.lsp.buf.hover({border='single'}) end, opts)
 
         -- code actions
         vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
-        vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
         vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, opts)
-        vim.keymap.set('n', '<F3>', vim.lsp.buf.format({ async = true }))
+        vim.keymap.set('n', '<F3>', function() vim.lsp.buf.format({ async = true }) end, opts)
     end,
 })
 
@@ -135,6 +124,8 @@ require('mason-lspconfig').setup({
         --end,
     },
 })
+
+
 
 local cmp = require("cmp")
 require('luasnip.loaders.from_vscode').lazy_load()

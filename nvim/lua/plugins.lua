@@ -35,15 +35,15 @@ return require('packer').startup(function(use)
   --use { 'VonHeikemen/lsp-zero.nvim', branch = 'v4.x' }
 
   -- for TeX
-  use {
-    'lervag/vimtex',
-    tag = "v2.16",
-    opt = true,
-    config = function()
-        vim.g.vimtex_view_method = "zathura"
-    end,
-    ft = 'tex',
-  }
+  --use {
+  --  'lervag/vimtex',
+  --  tag = "v2.16",
+  --  opt = true,
+  --  config = function()
+  --      vim.g.vimtex_view_method = "zathura"
+  --  end,
+  --  ft = 'tex',
+  --}
 
   --use {
   --    'neoclide/coc.nvim',
