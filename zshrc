@@ -26,6 +26,7 @@ export PATH="$HOME/.scripts:$PATH"
 #export PATH="$HOME/.local/bin:$PATH"
 #export PATH="$HOME/.cargo/bin:$PATH"
 #export PATH="$HOME/go/bin:$PATH"
+#export PATH="/opt/homebrew/bin/rustup:$PATH"
 #export PATH="/opt/homebrew/bin:$PATH"
 
 alias vim='nvim'

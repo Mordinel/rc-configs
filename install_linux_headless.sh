@@ -33,6 +33,6 @@ read -p "Run post-install scripts? (y/N): " choice
 if [[ "$choice" =~ ^[yY] ]]
 then
     # install packer for neovim
-    [[ -e "$PWD/nvim/packer_install.sh" ]] && $PWD/nvim/packer_install.sh
+    #[[ -e "$PWD/nvim/packer_install.sh" ]] && $PWD/nvim/packer_install.sh
 fi
 
