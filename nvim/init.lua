@@ -219,6 +219,8 @@ require("lazy").setup({
         { 
             'neovim/nvim-lspconfig',
             dependencies = { 'hrsh7th/cmp-nvim-lsp' },
+            opts = {
+            },
             config = function()
                 -- Add cmp_nvim_lsp capabilities settings to lspconfig
                 local lspconfig_defaults = require('lspconfig').util.default_config
@@ -228,7 +230,29 @@ require("lazy").setup({
                     lspconfig_defaults.capabilities,
                     require('cmp_nvim_lsp').default_capabilities()
                 )
+            end,
+            init = function()
+                vim.opt.signcolumn = 'yes'
 
+                -- Errors & Warnings
+                vim.diagnostic.config({
+                    virtual_text = true,
+                    severity_sort = true,
+                    float = {
+                        style  = 'minimal',
+                        border = 'single',
+                        header = '',
+                        prefix = '',
+                    },
+                    signs = {
+                        text = {
+                            [vim.diagnostic.severity.ERROR] = '✘',
+                            [vim.diagnostic.severity.WARN]  = '▲',
+                            [vim.diagnostic.severity.HINT]  = '⚑',
+                            [vim.diagnostic.severity.INFO]  = '»',
+                        },
+                    },
+                })
                 vim.api.nvim_create_autocmd('LspAttach', {
                     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
                     callback = function(ev)
@@ -257,60 +281,44 @@ require("lazy").setup({
             end,
         },
 
-        { 
-            'williamboman/mason-lspconfig.nvim', 
+        {
+            'mason-org/mason-lspconfig.nvim',
+            lazy = false,
+            opts = { },
             dependencies = {
-                { 
-                    'williamboman/mason.nvim', 
-                    opts = {},
-                    dependencies = {
-                        'mfussenegger/nvim-dap',
-                    },
-                },
-                'neovim/nvim-lspconfig',
-            },
-            init = function()
-                vim.opt.signcolumn = 'yes'
+                { 'mason-org/mason.nvim', opts = {} },
+                {
+                    'neovim/nvim-lspconfig',
+                    config = function()
+                        vim.lsp.config('*', { })
 
-                -- Errors & Warnings
-                vim.diagnostic.config({
-                    virtual_text = true,
-                    severity_sort = true,
-                    float = {
-                        style  = 'minimal',
-                        border = 'single',
-                        header = '',
-                        prefix = '',
-                    },
-                    signs = {
-                        text = {
-                            [vim.diagnostic.severity.ERROR] = '✘',
-                            [vim.diagnostic.severity.WARN]  = '▲',
-                            [vim.diagnostic.severity.HINT]  = '⚑',
-                            [vim.diagnostic.severity.INFO]  = '»',
-                        },
-                    },
-                })
-            end,
-            opts = {
-                handlers = {
-                    -- Activate default handler for every language server without a custom handler.
-                    function(server_name)
-                        require('lspconfig')[server_name].setup({})
-                    end,
-
-                    rust_analyzer = function()
-                        require('lspconfig').rust_analyzer.setup({
-                            cmd = { 'rust-analyzer' },
-                            completion = { autoimport = { exclude = {
-                                { path = 'std::usize', type = "always" },
-                                { path = 'std::isize', type = "always" },
-                            }}},
+                        vim.lsp.config('rust_analyzer', {
+                            require('lspconfig').rust_analyzer.setup({
+                                cmd = { 'rust-analyzer' },
+                                completion = { autoimport = { exclude = {
+                                    { path = 'std::usize', type = "always" },
+                                    { path = 'std::isize', type = "always" },
+                                    { path = 'std::f32', type = "always" },
+                                    { path = 'std::f64', type = "always" },
+                                    { path = 'std::u64', type = "always" },
+                                    { path = 'std::i64', type = "always" },
+                                    { path = 'std::u32', type = "always" },
+                                    { path = 'std::i32', type = "always" },
+                                    { path = 'std::str', type = "always" },
+                                    { path = 'core::usize', type = "always" },
+                                    { path = 'core::isize', type = "always" },
+                                    { path = 'core::f32', type = "always" },
+                                    { path = 'core::f64', type = "always" },
+                                    { path = 'core::u64', type = "always" },
+                                    { path = 'core::i64', type = "always" },
+                                    { path = 'core::u32', type = "always" },
+                                    { path = 'core::i32', type = "always" },
+                                    { path = 'core::str', type = "always" },
+                                }}},
+                            })
                         })
-                    end,
 
-                    pylsp = function()
-                        require('lspconfig').pylsp.setup({
+                        vim.lsp.config('pylsp', {
                             settings = {
                                 pylsp = {
                                     plugins = {
@@ -320,42 +328,18 @@ require("lazy").setup({
                                 },
                             },
                         })
-                    end,
 
-                    sith_lsp = function ()
-                        local lspconfig = require("lspconfig")
-                        local configs = require("lspconfig.configs")
-
-                        if not configs.sith_lsp then
-                            local root_files = {
-                                "pyproject.toml",
-                                "requirements.txt",
-                                "Pipfile",
-                                "pyrightconfig.json",
-                                ".git",
-                            }
-                            configs.sith_lsp = {
-                                default_config = {
-                                    cmd = { "sith-lsp" },
-                                    root_dir = function(fname)
-                                        return lspconfig.util.root_pattern(table.unpack(root_files))(fname)
-                                    end,
-                                    single_file_support = true,
-                                    filetypes = { "python" },
-                                    settings = {
-                                        ruff = {
-                                            lint = {
-                                                enable = true
-                                            }
-                                        }
+                        vim.lsp.config('basedpyright', {
+                            settings = {
+                                basedpyright = {
+                                    analysis = {
+                                        typeCheckingMode = 'standard',
                                     },
                                 },
-                            }
-                        end
-                    end,
+                            },
+                        })
 
-                    lua_ls = function()
-                        require('lspconfig').lua_ls.setup({
+                        vim.lsp.config('lua_ls', {
                             settings = {
                                 Lua = {
                                     runtime = {
@@ -370,30 +354,25 @@ require("lazy").setup({
                                 },
                             },
                         })
-                    end,
 
-                    hls = function()
-                        require('lspconfig')['hls'].setup{
-                            filetypes = { 'haskell', 'lhaskell', 'cabal' },
-                        }
-                    end,
+                        -- vim.lsp.config('hls', {
+                        --     filetypes = { 'haskell', 'lhaskell', 'cabal' },
+                        -- })
 
-                    --sourcekit = function()
-                    --    require('lspconfig').sourcekit.setup {
-                    --        cmd = {'/Library/Developer/CommandLineTools/usr/bin/sourcekit-lsp'}
-                    --    }
-                    --end,
+                        -- vim.lsp.config('sourcekit', {
+                        --     cmd = {'/Library/Developer/CommandLineTools/usr/bin/sourcekit-lsp'}
+                        -- })
 
-                    --omnisharp = function()
-                    --    require('lspconfig').omnisharp.setup({
-                    --        handlers = {
-                    --            ["textDocument/definition"] = require('omnisharp_extended').handler,
-                    --        }
-                    --    })
-                    --end,
+                        -- vim.lsp.config('omnisharp', {
+                        --     handlers = {
+                        --         ["textDocument/definition"] = require('omnisharp_extended').handler,
+                        --     }
+                        -- })
+
+                        end
+                    },
                 },
             },
-        },
 
         { 'mfussenegger/nvim-dap', },
 
