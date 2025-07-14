@@ -216,71 +216,6 @@ require("lazy").setup({
             end,
         },
 
-        { 
-            'neovim/nvim-lspconfig',
-            dependencies = { 'hrsh7th/cmp-nvim-lsp' },
-            opts = {
-            },
-            config = function()
-                -- Add cmp_nvim_lsp capabilities settings to lspconfig
-                local lspconfig_defaults = require('lspconfig').util.default_config
-
-                lspconfig_defaults.capabilities = vim.tbl_deep_extend(
-                    'force',
-                    lspconfig_defaults.capabilities,
-                    require('cmp_nvim_lsp').default_capabilities()
-                )
-            end,
-            init = function()
-                vim.opt.signcolumn = 'yes'
-
-                -- Errors & Warnings
-                vim.diagnostic.config({
-                    virtual_text = true,
-                    severity_sort = true,
-                    float = {
-                        style  = 'minimal',
-                        border = 'single',
-                        header = '',
-                        prefix = '',
-                    },
-                    signs = {
-                        text = {
-                            [vim.diagnostic.severity.ERROR] = '✘',
-                            [vim.diagnostic.severity.WARN]  = '▲',
-                            [vim.diagnostic.severity.HINT]  = '⚑',
-                            [vim.diagnostic.severity.INFO]  = '»',
-                        },
-                    },
-                })
-                vim.api.nvim_create_autocmd('LspAttach', {
-                    group = vim.api.nvim_create_augroup('UserLspConfig', {}),
-                    callback = function(ev)
-                        vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
-                        local opts = { buffer = ev.buf }
-
-                        -- gotos
-                        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-                        vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-                        vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-
-                        -- goto diagnostics
-                        vim.keymap.set('n', 'gl', vim.diagnostic.open_float, opts)
-                        vim.keymap.set('n', 'gnl', function() vim.diagnostic.jump({count= 1, float=true}) end, opts)
-                        vim.keymap.set('n', 'gbl', function() vim.diagnostic.jump({count=-1, float=true}) end, opts)
-
-                        -- docs
-                        vim.keymap.set('n', 'K', function() vim.lsp.buf.hover({border='single'}) end, opts)
-
-                        -- code actions
-                        vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
-                        vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, opts)
-                        vim.keymap.set('n', '<F3>', function() vim.lsp.buf.format({ async = true }) end, opts)
-                    end,
-                })
-            end,
-        },
-
         {
             'mason-org/mason-lspconfig.nvim',
             lazy = false,
@@ -289,6 +224,8 @@ require("lazy").setup({
                 { 'mason-org/mason.nvim', opts = {} },
                 {
                     'neovim/nvim-lspconfig',
+                    dependencies = { 'hrsh7th/cmp-nvim-lsp' },
+                    opts = { },
                     config = function()
                         vim.lsp.config('*', { })
 
@@ -369,7 +306,65 @@ require("lazy").setup({
                         --     }
                         -- })
 
-                        end
+                        end,
+                        config = function()
+                            -- Add cmp_nvim_lsp capabilities settings to lspconfig
+                            local lspconfig_defaults = require('lspconfig').util.default_config
+
+                            lspconfig_defaults.capabilities = vim.tbl_deep_extend(
+                                'force',
+                                lspconfig_defaults.capabilities,
+                                require('cmp_nvim_lsp').default_capabilities()
+                            )
+                        end,
+                        init = function()
+                            vim.opt.signcolumn = 'yes'
+
+                            -- Errors & Warnings
+                            vim.diagnostic.config({
+                                virtual_text = true,
+                                severity_sort = true,
+                                float = {
+                                    style  = 'minimal',
+                                    border = 'single',
+                                    header = '',
+                                    prefix = '',
+                                },
+                                signs = {
+                                    text = {
+                                        [vim.diagnostic.severity.ERROR] = '✘',
+                                        [vim.diagnostic.severity.WARN]  = '▲',
+                                        [vim.diagnostic.severity.HINT]  = '⚑',
+                                        [vim.diagnostic.severity.INFO]  = '»',
+                                    },
+                                },
+                            })
+                            vim.api.nvim_create_autocmd('LspAttach', {
+                                group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+                                callback = function(ev)
+                                    vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
+                                    local opts = { buffer = ev.buf }
+
+                                    -- gotos
+                                    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+                                    vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+                                    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+
+                                    -- goto diagnostics
+                                    vim.keymap.set('n', 'gl', vim.diagnostic.open_float, opts)
+                                    vim.keymap.set('n', 'gnl', function() vim.diagnostic.jump({count= 1, float=true}) end, opts)
+                                    vim.keymap.set('n', 'gbl', function() vim.diagnostic.jump({count=-1, float=true}) end, opts)
+
+                                    -- docs
+                                    vim.keymap.set('n', 'K', function() vim.lsp.buf.hover({border='single'}) end, opts)
+
+                                    -- code actions
+                                    vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
+                                    vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, opts)
+                                    vim.keymap.set('n', '<F3>', function() vim.lsp.buf.format({ async = true }) end, opts)
+                                end,
+                            })
+                        end,
                     },
                 },
             },
@@ -382,6 +377,6 @@ require("lazy").setup({
     -- colorscheme that will be used when installing plugins.
     install = { colorscheme = { "sunsurfer" } },
     -- automatically check for plugin updates
-    checker = { enabled = true },
+    checker = { enabled = false },
 })
 
