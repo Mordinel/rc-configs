@@ -227,38 +227,29 @@ require("lazy").setup({
                     dependencies = { 'hrsh7th/cmp-nvim-lsp' },
                     opts = { },
                     config = function()
-                        -- Add cmp_nvim_lsp capabilities settings to lspconfig
-                        local lspconfig_defaults = require('lspconfig').util.default_config
-                        lspconfig_defaults.capabilities = vim.tbl_deep_extend(
-                            'force',
-                            lspconfig_defaults.capabilities,
-                            require('cmp_nvim_lsp').default_capabilities()
-                        )
                         vim.lsp.config('rust_analyzer', {
-                            require('lspconfig').rust_analyzer.setup({
-                                cmd = { 'rust-analyzer' },
-                                completion = { autoimport = { exclude = {
-                                    { path = 'std::usize', type = "always" },
-                                    { path = 'std::isize', type = "always" },
-                                    { path = 'std::f32', type = "always" },
-                                    { path = 'std::f64', type = "always" },
-                                    { path = 'std::u64', type = "always" },
-                                    { path = 'std::i64', type = "always" },
-                                    { path = 'std::u32', type = "always" },
-                                    { path = 'std::i32', type = "always" },
-                                    { path = 'std::str', type = "always" },
-                                    { path = 'core::usize', type = "always" },
-                                    { path = 'core::isize', type = "always" },
-                                    { path = 'core::f32', type = "always" },
-                                    { path = 'core::f64', type = "always" },
-                                    { path = 'core::u64', type = "always" },
-                                    { path = 'core::i64', type = "always" },
-                                    { path = 'core::u32', type = "always" },
-                                    { path = 'core::i32', type = "always" },
-                                    { path = 'core::str', type = "always" },
-                                }}},
-                            })
+                            completion = { autoimport = { exclude = {
+                                { path = 'std::usize', type = "always" },
+                                { path = 'std::isize', type = "always" },
+                                { path = 'std::f32', type = "always" },
+                                { path = 'std::f64', type = "always" },
+                                { path = 'std::u64', type = "always" },
+                                { path = 'std::i64', type = "always" },
+                                { path = 'std::u32', type = "always" },
+                                { path = 'std::i32', type = "always" },
+                                { path = 'std::str', type = "always" },
+                                { path = 'core::usize', type = "always" },
+                                { path = 'core::isize', type = "always" },
+                                { path = 'core::f32', type = "always" },
+                                { path = 'core::f64', type = "always" },
+                                { path = 'core::u64', type = "always" },
+                                { path = 'core::i64', type = "always" },
+                                { path = 'core::u32', type = "always" },
+                                { path = 'core::i32', type = "always" },
+                                { path = 'core::str', type = "always" },
+                            }}},
                         })
+                        vim.lsp.enable('rust_analyzer')
 
                         vim.lsp.config('pylsp', {
                             settings = {
@@ -274,6 +265,7 @@ require("lazy").setup({
                                 },
                             },
                         })
+                        -- vim.lsp.enable('pylsp')
 
                         vim.lsp.config('basedpyright', {
                             settings = {
@@ -284,6 +276,7 @@ require("lazy").setup({
                                 },
                             },
                         })
+                        vim.lsp.enable('basedpyright')
 
                         vim.lsp.config('lua_ls', {
                             settings = {
@@ -300,26 +293,26 @@ require("lazy").setup({
                                 },
                             },
                         })
+                        vim.lsp.enable('lua_ls')
 
                         -- vim.lsp.config('hls', {
                         --     filetypes = { 'haskell', 'lhaskell', 'cabal' },
                         -- })
+                        -- vim.lsp.enable('hls')
 
                         -- vim.lsp.config('sourcekit', {
                         --     cmd = {'/Library/Developer/CommandLineTools/usr/bin/sourcekit-lsp'}
                         -- })
+                        -- vim.lsp.enable('sourcekit')
 
                         -- vim.lsp.config('omnisharp', {
                         --     handlers = {
                         --         ["textDocument/definition"] = require('omnisharp_extended').handler,
                         --     }
                         -- })
-
-                        vim.lsp.config('*', { })
+                        -- vim.lsp.enable('omnisharp')
                     end,
                     init = function()
-                        vim.opt.signcolumn = 'yes'
-
                         -- Errors & Warnings
                         vim.diagnostic.config({
                             virtual_text = true,
