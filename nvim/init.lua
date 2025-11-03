@@ -249,7 +249,7 @@ require("lazy").setup({
                                 { path = 'core::str', type = "always" },
                             }}},
                         })
-                        vim.lsp.enable('rust_analyzer')
+                        -- vim.lsp.enable('rust_analyzer')
 
                         vim.lsp.config('pylsp', {
                             settings = {
@@ -276,7 +276,7 @@ require("lazy").setup({
                                 },
                             },
                         })
-                        vim.lsp.enable('basedpyright')
+                        -- vim.lsp.enable('basedpyright')
 
                         vim.lsp.config('lua_ls', {
                             settings = {
@@ -293,12 +293,7 @@ require("lazy").setup({
                                 },
                             },
                         })
-                        vim.lsp.enable('lua_ls')
-
-                        -- vim.lsp.config('hls', {
-                        --     filetypes = { 'haskell', 'lhaskell', 'cabal' },
-                        -- })
-                        -- vim.lsp.enable('hls')
+                        -- vim.lsp.enable('lua_ls')
 
                         -- vim.lsp.config('sourcekit', {
                         --     cmd = {'/Library/Developer/CommandLineTools/usr/bin/sourcekit-lsp'}
@@ -364,7 +359,7 @@ require("lazy").setup({
 
         { 'mfussenegger/nvim-dap', },
 
-        { 'Hoffs/omnisharp-extended-lsp.nvim', },
+        -- { 'Hoffs/omnisharp-extended-lsp.nvim', },
     },
     -- Configure any other settings here. See the documentation for more details.
     -- colorscheme that will be used when installing plugins.
